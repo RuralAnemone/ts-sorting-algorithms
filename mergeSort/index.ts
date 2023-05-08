@@ -10,20 +10,19 @@ function mergeSort(inputArray: number[]): number[] {
 	let leftIndex: number = 0;
 	let rightIndex: number = 0;
 
-	while (leftIndex < sortedLeftHalf.length && rightIndex < sortedRightHalf.length) {
-		if (sortedLeftHalf[leftIndex] < sortedRightHalf[rightIndex]) {
+	debugger;
+
+	while (leftIndex < sortedLeftHalf.length || rightIndex < sortedRightHalf.length) {
+		if ((sortedLeftHalf[leftIndex] < sortedRightHalf[rightIndex]) || rightIndex >= sortedRightHalf.length) {
 			sortedArray.push(sortedLeftHalf[leftIndex]);
+			leftIndex++;
 		} else {
 			sortedArray.push(sortedRightHalf[rightIndex]);
+			rightIndex++;
 		}
 	}
 
 	return sortedArray;
 }
 
-const arr0: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-const arr1: number[] = [1,5,0,7,9,8,6,2,3,4];
-
-debugger;
-
-mergeSort(arr0);
+export default mergeSort;
