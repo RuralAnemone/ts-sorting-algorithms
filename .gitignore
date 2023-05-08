@@ -129,5 +129,7 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# test files
-*.test.*
+# config
+.replit
+replit.nix
+.vscode/
