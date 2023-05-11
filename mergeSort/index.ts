@@ -35,8 +35,6 @@ function mergeSort(inputArray: number[]): number[] {
 	let leftIndex: number = 0;
 	let rightIndex: number = 0;
 
-	debugger;
-
 	while (leftIndex < sortedLeftHalf.length || rightIndex < sortedRightHalf.length) {
 		if ((sortedLeftHalf[leftIndex] < sortedRightHalf[rightIndex]) || rightIndex >= sortedRightHalf.length) {
 			sortedArray.push(sortedLeftHalf[leftIndex]);
